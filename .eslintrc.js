@@ -28,7 +28,8 @@ module.exports = {
             "afterColon": true,
             "mode": "strict"
         }],
-        "vue/html-self-closing" : [0]
+        "vue/html-self-closing" : [0],
+        "semi" : [2, "always"]
     },
     globals: {
         "env" : false

@@ -7,6 +7,6 @@ beforeEach(()=> {
 
 test("the component mounts", function() {
     expect(()=>{
-        let vueProjectTemplate = mount(VueProjectTemplate);
+        mount(VueProjectTemplate);
     }).not.toThrow();
 });
