@@ -157,3 +157,10 @@ test("corrupt localstorage gets ignored and overwritten", () => {
     expect(getItemText(items.at(0))).toBe("apple");
     expect(getItemText(items.at(1))).toBe("yellow");
 });
+
+test("corrupt localstorage emits error", () => {
+    let storageKey = "to-do-list";
+    localStorage.setItem(storageKey, "corrup data");
+    let toDoList = mount(ToDoList);
+    expect(toDoList.emitted()["ERROR"].length).toBe(1);
+});
