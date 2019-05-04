@@ -1,7 +1,7 @@
 {
   "name": "xerocross.do",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.1.0",
+  "description": "A simple to-do list widget.",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --verbose",
@@ -18,7 +18,7 @@
   "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/xerocross/xerocross.do.git"
   },
   "jest": {
     "moduleFileExtensions": [
