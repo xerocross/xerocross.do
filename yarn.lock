@@ -1964,6 +1964,11 @@ compare-versions@^3.4.0:
   resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-3.4.0.tgz#e0747df5c9cb7f054d6d3dc3e1dbc444f9e92b26"
   integrity sha512-tK69D7oNXXqUW3ZNo/z7NXTEz22TCF0pTE+YF9cxvaAM9XnkLo1fV621xCLrRR6aevJlKxExkss0vWqUCUpqdg==
 
+comparison-wrapper@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/comparison-wrapper/-/comparison-wrapper-0.3.0.tgz#ffc00a2093939c4fdfccfdeadfbf2225d5a60fd0"
+  integrity sha512-QoE7sqiMq6rjkKjq/p/gvt4BF/JAgWbF3GJHXFejyWmy3PeXkZmBD5V99S4GrSkf84ZbSWB9vSuTGVKVAR1DBw==
+
 component-emitter@^1.2.1:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
@@ -2153,6 +2158,11 @@ cross-env@^5.2.0:
   dependencies:
     cross-spawn "^6.0.5"
     is-windows "^1.0.0"
+
+cross-js-base@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/cross-js-base/-/cross-js-base-1.0.0.tgz#7045f1aadca3627ea32e59a4a924472336267324"
+  integrity sha512-xxyEb+8t+V4uv+PIwwc8afvzQCMWUJM/fhfUAxLuzPY1rf5CvDtYY+jz88pomtE5sF1HhT/ivbaC4c2KeaslxQ==
 
 cross-spawn@^3.0.0:
   version "3.0.1"
@@ -7392,6 +7402,11 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
+we-assert@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/we-assert/-/we-assert-0.12.0.tgz#b2eb16a69d1537461399bdb910fd82202d13a8fd"
+  integrity sha512-BFN4UkteCNj/ESAZ/1E70QBnbcpk0+BuzeREl4ealbTaohfo2ggJFdhb7kEUIG3/NAhX0BkL0KUd8GWaxIGhUA==
+
 webidl-conversions@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
@@ -7625,6 +7640,14 @@ ws@^5.2.0:
   integrity sha512-jaHFD6PFv6UgoIVda6qZllptQsMlDEJkTQcybzzXDYM1XO9Y8em691FGMPmM46WGyLU4z9KMgQN+qrux/nhlHA==
   dependencies:
     async-limiter "~1.0.0"
+
+xerocross.data@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/xerocross.data/-/xerocross.data-0.4.0.tgz#0bd4a85cac773499eac4ebe440a1f4efb60852aa"
+  integrity sha512-b9v0FDeGL0IWmMaUrYaOD5wG4WkUxgZ2vI7yEVSRF2GO3sjhwBD3UHruyhBhWIgeFfqV4esT4t8hEOdUn+EZCQ==
+  dependencies:
+    comparison-wrapper "^0.3.0"
+    we-assert "^0.12.0"
 
 xml-name-validator@^3.0.0:
   version "3.0.0"
