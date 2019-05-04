@@ -39,8 +39,8 @@
 </template>
 <script>
 import { StoreLocal } from "cross-js-base";
-import {SimpleHashSet} from "xerocross.data";
-import {StringHash} from "cross-js-base";
+import { SimpleHashSet } from "xerocross.data";
+import { StringHash } from "cross-js-base";
 
 export default {
     components : {},
@@ -109,7 +109,6 @@ export default {
         .form-box {
             margin-bottom: 2em;
         }
-
         .item {
             font-weight: bold;
             font-size: 18pt;
@@ -129,7 +128,6 @@ export default {
             padding-right:5px;
         }
     }
-
     .add-button {
         margin-top: 1em;
         padding:1em;
