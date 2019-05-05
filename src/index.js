@@ -4,7 +4,7 @@ import ToDoList from "./components/to-do-list.vue";
 let NODE_ENV = env["NODE_ENV"];
 
 new Vue({
-    el : "#xerocross-do",
+    el : "#to-do-list",
     components : {
         ToDoList
     },
