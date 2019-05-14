@@ -121,6 +121,7 @@ export default {
     }
     .list-group-item.flex-item {
         .flex-container {
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
