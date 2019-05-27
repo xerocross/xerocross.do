@@ -1,0 +1,11 @@
+@keyframes initHighlight {
+    0%   {background-color:#ffdd6d;}
+    100% {background-color : auto;}
+}
+
+.animate-init-highlight {
+    animation-name: initHighlight;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+  

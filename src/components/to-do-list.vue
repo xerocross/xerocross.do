@@ -39,9 +39,9 @@
             <li 
                 v-for="item in itemList" 
                 :key="item" 
-                v-init-highlight="getItemId(item)"
+                
                 :data-item="getItemId(item)"
-                class="list-group-item flex-item"
+                class="list-group-item flex-item animate-init-highlight"
             >
                 <div class="row">
                     <div class="flex-container">
@@ -140,6 +140,7 @@ export default {
 };
 </script>
 <style lang="scss">
+
 .to-do-list {
     label {
         font-size: 15pt;
