@@ -10,16 +10,37 @@
                 class="form-control new-item-text"
                 type="text"
             />
-            <input 
-                class="btn btn-primary add-button" 
-                type="submit" 
-                value="add"
-            />
+        
+            <div class="row">
+                <div class="col-6">
+                    <input 
+                        class="btn btn-primary btn-spaced" 
+                        type="submit" 
+                        value="add"
+                    />
+                </div>
+                
+                <div class="col-6 clear-all-div">
+                    <button
+                        v-my-button-tooltip
+                        class="btn btn-danger btn-spaced"
+                        data-tooltip="clear"
+                        data-toggle="tooltip" 
+                        data-placement="top" 
+                        title="clearing all items is irreversible"
+                        @click="clearAll"
+                    >
+                        clear all
+                    </button>
+                </div>
+            </div>
         </form>
         <ul class="list-group items-list">
             <li 
                 v-for="item in itemList" 
                 :key="item" 
+                v-highlight="getItemId(item)"
+                :data-item="getItemId(item)"
                 class="list-group-item flex-item"
             >
                 <div class="row">
@@ -41,6 +62,7 @@
 import { StoreLocal } from "cross-js-base";
 import { SimpleHashSet } from "xerocross.data";
 import { StringHash } from "cross-js-base";
+import $ from "jquery";
 
 export default {
     components : {},
@@ -62,6 +84,7 @@ export default {
             this.$emit("ERROR", e);
         }
         this.buildFromStorage();
+        $("[data-tooltip]").tooltip();
     },
     methods : {
         add () {
@@ -81,6 +104,19 @@ export default {
             if (confirm("Remove this item?")) {
                 this.itemSet.remove(item);
                 this.storeLocal.removeItem(item);
+                this.update();
+            }
+        },
+        getItemId (item) {
+            return "x"+ StringHash.hash(item);
+        },
+        clearAll () {
+            if (confirm("Really clear the list?  This action is irreversible.")) {
+                let list = this.itemSet.toList();
+                list.forEach((item) => {
+                    this.itemSet.remove(item);
+                    this.storeLocal.removeItem(item);
+                });
                 this.update();
             }
         },
@@ -105,6 +141,10 @@ export default {
 </script>
 <style lang="scss">
 .to-do-list {
+    label {
+        font-size: 15pt;
+        font-weight: bold;
+    }
     .flex-item {
         .form-box {
             margin-bottom: 2em;
@@ -129,9 +169,12 @@ export default {
             padding-right:5px;
         }
     }
-    .add-button {
-        margin-top: 1em;
-        padding:1em;
+    .clear-all-div {
+        text-align: right;
+    }
+    .btn-spaced {
+        margin-bottom:10px;
+        margin-top: 10px;
     }
     select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] { font-size: 16px; }
 }
