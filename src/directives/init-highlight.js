@@ -2,8 +2,7 @@ import Vue from "vue";
 import $ from "jquery";
 
 const hightlightColor = "#ffdd6d";
-Vue.directive('highlight', {
-    hightlightColor : "#ffdd6d",
+Vue.directive('init-highlight', {
     inserted : (el, binding) => {
         const selector = `[data-item=${binding.value}]`;
         $(selector)

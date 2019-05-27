@@ -39,7 +39,7 @@
             <li 
                 v-for="item in itemList" 
                 :key="item" 
-                v-highlight="getItemId(item)"
+                v-init-highlight="getItemId(item)"
                 :data-item="getItemId(item)"
                 class="list-group-item flex-item"
             >
